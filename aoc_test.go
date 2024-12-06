@@ -57,3 +57,35 @@ func TestDay2(t *testing.T) {
 		is.Equal(413, result)
 	})
 }
+
+func TestDay3(t *testing.T) {
+	t.Run("pt1 example", func(t *testing.T) {
+		is := is.New(t)
+		result := day3Part1("./data/day3_example.txt")
+		is.Equal(161, result)
+	})
+
+	t.Run("pt1 input", func(t *testing.T) {
+		is := is.New(t)
+		result := day3Part1("./data/day3_input.txt")
+		is.Equal(188741603, result)
+	})
+
+	t.Run("pt2 example", func(t *testing.T) {
+		is := is.New(t)
+		result := day3Part2("./data/day3_example_pt2.txt")
+		is.Equal(48, result)
+	})
+
+	t.Run("pt2 input_small", func(t *testing.T) {
+		is := is.New(t)
+		result := day3Part2("./data/day3_input_small_pt2.txt")
+		is.Equal(903417, result)
+	})
+
+	t.Run("pt2 input", func(t *testing.T) {
+		is := is.New(t)
+		result := day3Part2("./data/day3_input.txt")
+		is.Equal(67269798, result)
+	})
+}
